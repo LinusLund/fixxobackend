@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Logo from '../assets/images/logo.svg'
+import Logo from '../Assets/images/logo.svg'
 import { NavLink } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar :React.FC = () => {
   return (
     <nav className ="__navbar">
         <div className ="container">
@@ -12,7 +12,7 @@ const Navbar = () => {
                 <NavLink className='navCategory' to="/">Home</NavLink>
                 <NavLink className='navCategory' to='/Categories'>Categories</NavLink>
                 <NavLink className='navCategory' to='/Products'>Products</NavLink>
-                <NavLink className='navCategory' to='/contacts'>Contacts</NavLink>
+                <NavLink className='navCategory' to='*'>Contacts</NavLink>
             </div>
 
             <div className ='menu-icons'>

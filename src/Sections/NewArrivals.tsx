@@ -1,10 +1,10 @@
 import React from 'react';
-import WomanHeadHand from '../assets/images/WomanHeadHand.svg';
-import Pocketman from '../assets/images/pocketMan.svg';
-import ShopButton from './ShopButton';
+import WomanHeadHand from '../Assets/images/WomanHeadHand.svg';
+import Pocketman from '../Assets/images/pocketMan.svg';
+import ShopButton from '../Components/ShopButton';
 
 
-function NewArrivals() {
+const NewArrivals :React.FC = () => {
   return (
     
     <section className="__newarrivals">

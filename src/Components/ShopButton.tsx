@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ShopButton() {
+const ShopButton = () => {
   return (
     <>                
     <button className='ShopButton'><span className="top-left"></span>

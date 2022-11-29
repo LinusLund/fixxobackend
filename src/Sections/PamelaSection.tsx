@@ -1,11 +1,11 @@
 import React from 'react'
-import PamelaContour from '../assets/images/PamelaContour.svg';
-import GirlPosing from '../assets/images/GirlPosing.svg';
+import PamelaContour from '../Assets/images/PamelaContour.svg';
+import GirlPosing from '../Assets/images/GirlPosing.svg';
 
 
 
 
-const PamelaSection = () => {
+const PamelaSection : React.FC = () => {
   return (
     <div>
         <section className = 'container'>

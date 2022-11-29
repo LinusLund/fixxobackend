@@ -1,13 +1,20 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const BreadcrumbSection = ({currentPage}) => {
+interface BreadcrumbType {
+  currentPage: string
+  parentPage?: string
+}
+
+const BreadcrumbSection :React.FC<BreadcrumbType> = ({currentPage, parentPage}) => {
   return (
     <section className = "breadcrumb">
         <div className = "container">
             <ul className = "breadcrumb_list">
                 <li>
-                    <NavLink to ="/">Home</NavLink>
+                  {
+                    (parentPage != undefined) ? <li><NavLink to={`/${parentPage}`}>{parentPage}</NavLink></li> :""
+                  }
                 </li>
                 <li>{currentPage}</li>
             </ul>
