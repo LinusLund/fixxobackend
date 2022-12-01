@@ -457,6 +457,79 @@
   color: #23262A;
 }
 
+.commentForm {
+  margin-top: 3.75rem;
+}
+.commentForm h5 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.commentForm form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.commentForm form input {
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid #BEBEBE;
+}
+.commentForm form .validFail {
+  border: 1px solid red;
+}
+.commentForm form .textarea {
+  grid-column: 1/-1;
+}
+.commentForm form textarea {
+  width: 100%;
+  height: 140px;
+  padding: 18px 20px;
+  border: 1px solid #BEBEBE;
+  resize: none;
+}
+.commentForm .btn-submit {
+  position: relative;
+  color: white;
+  background-color: #FF7373;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 20px 50px;
+  width: 100%;
+  grid-column: 1/-1;
+}
+.commentForm .btn-submit:hover {
+  background-color: black;
+  color: white;
+  transition: 0.2s ease-in;
+}
+.commentForm .error {
+  color: #FF7373;
+  border: 1px solid #FF7373;
+}
+.commentForm .errorMessage {
+  margin-top: 5px;
+  color: #FF7373;
+  font-size: 0.8em;
+}
+
+@media (min-width: 768px) {
+  .contact-form form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 412px) {
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form h5 {
+    text-align: start;
+  }
+}
 .ShopButton {
   position: relative;
   font-weight: bold;
@@ -742,4 +815,22 @@ button:hover .bottom-right {
   .container .card .card-menu {
     visibility: visible;
   }
+}
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mapContainer .ContactUsMap {
+  position: relative;
+  margin-top: 5rem;
+  width: 100%;
+  height: 30rem;
+}
+
+.mapContainer .ContactUsMap iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

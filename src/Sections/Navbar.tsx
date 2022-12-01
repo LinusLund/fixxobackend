@@ -12,7 +12,7 @@ const Navbar :React.FC = () => {
                 <NavLink className='navCategory' to="/">Home</NavLink>
                 <NavLink className='navCategory' to='/Categories'>Categories</NavLink>
                 <NavLink className='navCategory' to='/Products'>Products</NavLink>
-                <NavLink className='navCategory' to='*'>Contacts</NavLink>
+                <NavLink className='navCategory' to='/Contacts'>Contacts</NavLink>
             </div>
 
             <div className ='menu-icons'>

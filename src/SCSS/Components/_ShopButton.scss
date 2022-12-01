@@ -4,28 +4,28 @@
     border:none;
     height:3rem;
     width:10rem;
-    background-color: #FF7373;
+    background-color: $color-coral;
     color:#fff;
 }
 
 .ShopButton .top-left
 {
-    background-color: #FF7373;
+    background-color:$color-coral;
     position:absolute;
     height:1rem;
     width:1rem;
     top:7px;
     left:8px;
     border: solid 1px #fff;
-    border-right-color: #FF7373;
-    border-bottom-color:#FF7373;
+    border-right-color: $color-coral;
+    border-bottom-color:$color-coral;
 }
 
 .ShopButton .bottom-right
 {
-    background-color: #FF7373;
-    border-left-color: #FF7373;
-    border-top-color:#FF7373;
+    background-color:$color-coral;
+    border-left-color: $color-coral;
+    border-top-color:$color-coral;
     position:absolute;
     height:1rem;
     width:1rem;

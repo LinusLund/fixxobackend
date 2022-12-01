@@ -1,20 +1,24 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Navbar from '../Sections/Navbar';
 import Footer from '../Sections/Footer';
 import BreadcrumbSection  from '../Sections/BreadcrumbSection';
 import FeaturedProducts from '../Sections/FeaturedProducts';
-import { ProductContext } from '../Contexts/contexts';
-import { useContext } from 'react';
+import { ProductContextType, useProductContext } from '../Contexts/contexts';
+
 
 
 const ProductsView :React.FC = () => {
+  const {all,getAll} = useProductContext() as ProductContextType
+  useEffect(() => {
+    getAll()
+  },[])
 
-  const products = useContext(ProductContext)
 
   return (
      <>
      <Navbar />
-     <FeaturedProducts title="All Products" products={products} />
+     <BreadcrumbSection/>
+     <FeaturedProducts title="All Products" products={all} />
      <Footer />
     </>
   )

@@ -1,7 +1,7 @@
 export interface props {
     name: string;
 
-    articleNumber: number;
+    articleNumber: string;
 
     price: number;
 
@@ -13,11 +13,3 @@ export interface props {
 }
 
 
-export interface errorProps {
-
-    name: string;
-
-    email: string;
-
-    comments: string;
-}
