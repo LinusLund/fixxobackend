@@ -1,5 +1,9 @@
 export interface props {
     name: string;
+    
+    tag: string;
+
+    description: string,
 
     articleNumber: string;
 
@@ -9,7 +13,7 @@ export interface props {
 
     imageName: string;
 
-    product: string;
+    
 }
 
 

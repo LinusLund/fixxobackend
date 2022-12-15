@@ -17,7 +17,6 @@ const ProductsView :React.FC = () => {
   return (
      <>
      <Navbar />
-     <BreadcrumbSection/>
      <FeaturedProducts title="All Products" products={all} />
      <Footer />
     </>
