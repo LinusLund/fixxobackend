@@ -10,7 +10,7 @@ const infoBoxes :React.FC = () => {
 
         <div className = 'infoBox '>
             <span className ='boxLogo'>
-                <img src= {customerService} alt="Customer Service" />
+                <img className = "infoPic" src= {customerService} alt="Customer Service" />
             </span>
             <h2 className ='boxHead'>Customer Support</h2>
             <p>village did not remove enjoyed explain talking</p>
@@ -18,7 +18,7 @@ const infoBoxes :React.FC = () => {
 
         <div className = 'infoBox'>
             <span className ='boxLogo'>
-                <img src= {creditCard} alt="Customer Service" />
+                <img className = "infoPic" src = {creditCard} alt="Customer Service" />
             </span>
             <h2 className ='boxHead'>Secured Payment</h2>
             <p>village did not remove enjoyed explain talking</p>
@@ -26,7 +26,7 @@ const infoBoxes :React.FC = () => {
 
         <div className = 'infoBox'>
             <span className ='boxLogo'>
-                <img src= {deliveryTruck} alt="Customer Service" />
+                <img className = "infoPic" src= {deliveryTruck} alt="Customer Service" />
             </span>
             <h2 className ='boxHead'>Free Home Delivery</h2>
             <p>village did not remove enjoyed explain talking</p>

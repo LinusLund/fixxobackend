@@ -17,7 +17,7 @@ import { ProductContextType, useProductContext } from '../Contexts/contexts';
 
 
 const HomeView :React.FC = () => {
-  const {featured, flashSale, getFeatured, getFlashSale} = useProductContext() as ProductContextType
+  const {featured, flashSale, flashSale2, getFeatured, getFlashSale, getFlashSale2} = useProductContext() as ProductContextType
 
 useEffect(() => {
   getFeatured(8)
@@ -27,6 +27,9 @@ useEffect(() => {
   getFlashSale(4)
 },[])
 
+useEffect(() => {
+  getFlashSale2(4)
+},[])
   
   
 
@@ -39,7 +42,7 @@ useEffect(() => {
         <FeaturedProducts title ="Featured Products" products={featured}/>
         <PamelaSection />
         <GridSection products={flashSale} /> 
-        <GridSection2 products={flashSale} />
+        <GridSection2 products={flashSale2} />
         <InfoBoxes />
         <Footer />
 

@@ -11,10 +11,12 @@ export interface ProductContextType{
     all: props[]
     featured: props[]
     flashSale: props[]
+    flashSale2: props[]
     get: (articleNumber?: string) => void
     getAll: () => void
     getFeatured: (take?: number) => void
     getFlashSale: (take?: number) => void
+    getFlashSale2: (take?: number) => void
 }
 
 
@@ -32,6 +34,7 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
     const [all, setAll] = useState<props[]>([])
     const [featured, setFeatured] = useState<props[]>([])
     const [flashSale, setFlashSale] = useState<props[]>([])
+    const [flashSale2, setFlashSale2] = useState<props[]>([])
 
     const get = async (articleNumber?: string) => {
         if (articleNumber !== undefined){
@@ -63,7 +66,15 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
             setFlashSale(await res.json())
     }
 
-return <ProductContext.Provider value = {{product, all, featured, flashSale, get, getAll, getFeatured, getFlashSale}}>
+    const getFlashSale2 = async (take:number = 0) => {
+        let url = `${baseUrl}/flashSale2`
+            if (take !== 0)
+                url +=`/${take}`
+            const res = await fetch(url)
+            setFlashSale2(await res.json())
+    }
+
+return <ProductContext.Provider value = {{product, all, featured, flashSale, flashSale2, get, getAll, getFeatured, getFlashSale, getFlashSale2}}>
     {children}
     </ProductContext.Provider>
 }
