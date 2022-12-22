@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Sections/Navbar';
 import Footer from '../Sections/Footer';
-import BreadcrumbSection  from '../Sections/BreadcrumbSection'
+import {ProductContextType, useProductContext } from '../Contexts/contexts';
+import ProductDetails from '../Sections/ProductDetails';
 import { useParams } from 'react-router-dom';
+
 
 const ProductDetailsView :React.FC = () => {
 
+  const {id} = useParams<string>()
+  const productContext = useProductContext() as ProductContextType
+
+  useEffect(() => {
+    productContext.get(id)
+  }, [])
 
   return (
     <>
-    <Navbar />  
+    <Navbar /> 
+    <ProductDetails product = {productContext.product}/>
     <Footer />
     </>
   

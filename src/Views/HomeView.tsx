@@ -36,7 +36,6 @@ useEffect(() => {
   return (
     <div className = "HomePage">       
         <Navbar />
-        <BreadcrumbSection currentPage='HomePage'/>
         <Showcase />
         <NewArrivals />
         <FeaturedProducts title ="Featured Products" products={featured}/>

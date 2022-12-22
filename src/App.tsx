@@ -21,7 +21,7 @@ function App() {
                 <Route path="/" element={<HomeView/>}  />
                 <Route path="/Contacts" element={<ContactsView />} />
                 <Route path="/Products" element={<ProductsView />} />
-                <Route path="/products/:name" element={<ProductDetailsView />} />
+                <Route path="/products/product/details/:id" element={<ProductDetailsView />} />
                 <Route path="/Categories" element={<CategoriesView />} />
                 <Route path="/Search" element={<SearchView />} />
                 <Route path="*" element={<NotFoundView />} />

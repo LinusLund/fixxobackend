@@ -35,6 +35,7 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
     const [featured, setFeatured] = useState<props[]>([])
     const [flashSale, setFlashSale] = useState<props[]>([])
     const [flashSale2, setFlashSale2] = useState<props[]>([])
+    
 
     const get = async (articleNumber?: string) => {
         if (articleNumber !== undefined){
@@ -42,7 +43,13 @@ const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
             setProduct(await res.json())
         }
     }
-
+    // const get  = async (articleNumber?: string) => {
+    //   let url = `${baseUrl}/product/details/${articleNumber}`
+     
+    //  const res = await fetch(url)
+    //  setProduct(await res.json())
+    // }
+    
     const getAll = async () => {        
         const res = await fetch(baseUrl)
         setAll(await res.json())
